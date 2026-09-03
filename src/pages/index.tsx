@@ -10,12 +10,12 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero-dynamic', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title mb-4">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle mb-8">
+        <p className="hero__subtitle mb-8" style={{ fontSize: '1.2rem', fontWeight: '400', maxWidth: '800px', margin: '0 auto 2rem' }}>
           {siteConfig.tagline}
         </p>
         <div className={styles.buttons}>

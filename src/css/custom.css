@@ -60,6 +60,23 @@
   color: inherit;
 }
 
+/* Dynamic Blue Hero Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-dynamic {
+  background: linear-gradient(-45deg, #4c1d95, #6d28d9, #7c3aed, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white !important;
+}
+.hero-dynamic h1, .hero-dynamic p {
+  color: white !important;
+}
+
 /* Force footer to match dark mode background */
 [data-theme='dark'] .footer,
 [data-theme='dark'] .footer--dark {
@@ -73,6 +90,15 @@
 }
 
 .footer__links {
-  justify-content: center;
-  gap: 4rem;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 30vw !important; /* Extremely wide on desktop, shrinks safely on mobile */
+  margin: 0 auto !important;
+}
+
+.footer__col {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  margin: 0 !important; 
+  padding: 0 !important; 
 }

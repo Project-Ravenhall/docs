@@ -101,7 +101,7 @@ const config: Config = {
           label: 'Getting Started',
         },
         {
-          href: '#',
+          href: 'https://github.com/Project-Ravenhall/docs.git',
           position: 'right',
           className: 'header-github-link',
           'aria-label': 'GitHub repository',
@@ -126,7 +126,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: '#',
+              href: 'https://github.com/Project-Ravenhall',
             },
           ],
         },
