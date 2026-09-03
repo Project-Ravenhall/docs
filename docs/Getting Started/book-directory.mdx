@@ -1,0 +1,50 @@
+---
+sidebar_position: 2
+---
+# Books Directory
+
+To ensure Ravenhall scans and categorizes your library correctly, your books must be organized into a specific folder structure. 
+
+## The Directory Tree
+
+Your root books directory (e.g., `/data/media/books/`) should be organized hierarchically by **Author**, then by **Series** (optional), and finally by **Book Title**.
+
+Here is an example of a perfectly structured library:
+
+```text
+/data/media/books/                  <-- (Your root books directory)                                                                                                                                                                              
+ ├── J.K. Rowling/                  <-- Depth 1 (Author Name)                                                                                                                                                                
+ │   │                                                                                                                                                                                                                       
+ │   ├── Harry Potter/              <-- Depth 2 (Series Name)                                                                                                                                                                
+ │   │   │                                                                                                                                                                                                                   
+ │   │   ├── Philosopher's Stone/   <-- Depth 3 (Book Title)                                                                                                                                                                 
+ │   │   │   └── book.pdf           <-- Depth 4 (File) ✅ ALLOWED                                                                                                                                                   
+ │   │   │                                                                                                                                                                                                                   
+ │   │   └── Chamber of Secrets/    <-- Depth 3 (Book Title)                                                                                                                                                                 
+ │   │       └── book.epub          <-- Depth 4 (File) ✅ ALLOWED                                                                                                                                                   
+ │   │                                                                                                                                                                                                                       
+ │   └── The Ickabog/               <-- Depth 2 (Book Title - No Series)                                                                                                                                                     
+ │       └── book.pdf               <-- Depth 3 (File) ✅ ALLOWED                                                                                                                                                   
+ │                                                                                                                                                                                                                           
+ ├── Andy Weir/                     <-- Depth 1 (Author Name)                                                                                                                                                                
+ │   │                                                                                                                                                                                                                       
+ │   └── Project Hail Mary/         <-- Depth 2 (Book Title - No Series)                                                                                                                                                     
+ │       └── project_hail_mary.pdf  <-- Depth 3 (File) ✅ ALLOWED                                                                                                                                                   
+ │                                                                                                                                                                                                                           
+ └── Rebecca.pdf                    <-- Depth 1 (File) ❌ SKIPPED 
+```
+
+## Structure Rules
+
+To guarantee your books are detected, follow these strict depth rules:
+
+1. **Depth 1 (Author):** The folder immediately inside your root directory MUST be the author's name. Files placed directly in the root directory (like `Rebecca.pdf` above) will be skipped.
+2. **Depth 2 (Series or Book):** Inside the author folder, you can either place a folder for a **Series** or a folder for a standalone **Book Title**.
+3. **Depth 3 (Book or File):** 
+   - If Depth 2 was a Series, Depth 3 MUST be a folder for the specific **Book Title**.
+   - If Depth 2 was a standalone Book Title, Depth 3 should be the actual book file (e.g., `.pdf` or `.epub`).
+4. **Depth 4 (File):** If Depth 2 was a series and Depth 3 was the book title, Depth 4 should be the actual book file.
+
+:::caution[Folder Requirements]
+Ravenhall relies on folder names to determine metadata like Authors and Series. Always place your book files inside a Book Title folder, and **never** leave files loose in the root, Author, or Series folders!
+:::

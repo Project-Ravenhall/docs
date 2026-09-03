@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+:root {
+  --ifm-color-primary: #6366f1; /* indigo-500 */
+  --ifm-color-primary-dark: #4f46e5; /* indigo-600 */
+  --ifm-color-primary-darker: #4338ca; /* indigo-700 */
+  --ifm-color-primary-darkest: #3730a3; /* indigo-800 */
+  --ifm-color-primary-light: #818cf8; /* indigo-400 */
+  --ifm-color-primary-lighter: #a5b4fc; /* indigo-300 */
+  --ifm-color-primary-lightest: #c7d2fe; /* indigo-200 */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #818cf8; /* indigo-400 */
+  --ifm-color-primary-dark: #6366f1; /* indigo-500 */
+  --ifm-color-primary-darker: #4f46e5; /* indigo-600 */
+  --ifm-color-primary-darkest: #4338ca; /* indigo-700 */
+  --ifm-color-primary-light: #a5b4fc; /* indigo-300 */
+  --ifm-color-primary-lighter: #c7d2fe; /* indigo-200 */
+  --ifm-color-primary-lightest: #e0e7ff; /* indigo-100 */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Background overrides for Docusaurus based on your design system */
+  --ifm-background-color: #141415; /* requested dark black */
+  --ifm-background-surface-color: #1e1e20; /* slightly lighter for surface */
+  --ifm-hover-overlay: rgba(39, 39, 42, 0.5);
+  
+  /* Text overrides */
+  --ifm-font-color-base: #d4d4d8; /* text-muted-light */
+  --ifm-heading-color: #f4f4f5; /* text-primary */
+  --ifm-color-content-secondary: #a1a1aa; /* text-muted */
+  
+  /* Border overrides */
+  --ifm-toc-border-color: #3f3f46; /* borderbase */
+  --ifm-color-emphasis-200: #3f3f46; /* borderbase for general borders */
+  --ifm-color-emphasis-300: #3f3f46;
+  
+  /* Footer overrides */
+  --ifm-footer-background-color: #141415; /* Match base background */
+  
+  /* Code Block Overrides */
+  --ifm-code-background: #1e1e20; /* Matches surface color */
+  --ifm-code-color: #a5b4fc; /* indigo-300 for inline code */
+  --prism-background-color: #1a1a1c !important; /* Slightly darker than surface for code blocks */
+}
+
+/* Custom Selection Color for Dark Mode */
+[data-theme='dark'] ::selection {
+  background-color: rgba(0, 120, 255, 0.3);
+  color: inherit;
+}
+
+/* Force footer to match dark mode background */
+[data-theme='dark'] .footer,
+[data-theme='dark'] .footer--dark {
+  background-color: #0f0f10 !important;
+  --ifm-footer-background-color: #0f0f10;
+}
+
+/* Center Footer Content */
+.footer {
+  text-align: center;
+}
+
+.footer__links {
+  justify-content: center;
+  gap: 4rem;
+}
