@@ -61,6 +61,12 @@
 }
 
 /* Dynamic Blue Hero Background */
+@-webkit-keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -68,9 +74,10 @@
 }
 
 .hero-dynamic {
-  background: linear-gradient(-45deg, #4c1d95, #6d28d9, #7c3aed, #9333ea);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
+  background: linear-gradient(-45deg, #4c1d95, #6d28d9, #7c3aed, #9333ea) !important;
+  background-size: 400% 400% !important;
+  -webkit-animation: gradientBG 10s ease infinite !important;
+  animation: gradientBG 10s ease infinite !important;
   color: white !important;
 }
 .hero-dynamic h1, .hero-dynamic p {
